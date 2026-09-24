@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useEffect, useMemo, useState } from 'react'
 
-const API_URL = import.meta.env.VITE_API_URL.replace(/\/$/, '')
+const API_URL = (import.meta.env.VITE_API_URL || 'https://imageking-fawn.vercel.app').replace(/\/$/, '')
 
 const readStorage = (key, fallback) => {
   try {
